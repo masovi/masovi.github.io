@@ -18,7 +18,13 @@
         <script>
             const version = Math.floor(Math.random() * 1000000);
             console.log('version', version);
-            window.location.href = 'https://ar-marker.msoler.dev/?v=' + version;
+
+            const url = new URL(window.location.href);
+            const params = new URLSearchParams(url.search);
+            const nameValue = params.get('maker');
+            console.log('marker', name);
+
+            // window.location.href = 'https://ar-marker.msoler.dev/?v=' + version;
         </script>
     </body>
 </html>
